@@ -19,7 +19,7 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - name: Build and push Docker Image
-        run: nix run .#pushImage
+        run: nix run .#pushImage.x86_64-linux
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

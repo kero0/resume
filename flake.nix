@@ -63,15 +63,17 @@
       pushImage = let
         f = system:
           let pkgs = import nixpkgs { inherit system; };
-          in pkgs.writeShellScriptBin "push-image" ''
-            set -euo pipefail
-            ${pkgs.skopeo}/bin/skopeo copy \
-              --dest-creds $DOCKER_USERNAME:$DOCKER_PASSWORD \
-              --dest-tls-verify=false \
-              --insecure-policy \
-              docker-archive://${container} \
-              docker://docker.io/kero18/resume-builder:latest
-          '';
+          in {
+            ${system} = pkgs.writeShellScriptBin "push-image" ''
+              set -euo pipefail
+              ${pkgs.skopeo}/bin/skopeo copy \
+                --dest-creds $DOCKER_USERNAME:$DOCKER_PASSWORD \
+                --dest-tls-verify=false \
+                --insecure-policy \
+                docker-archive://${container} \
+                docker://docker.io/kero18/resume-builder:latest
+            '';
+          };
       in nixpkgs.lib.foldr nixpkgs.lib.mergeAttrs { } (map f supportedSystems);
     };
 }
