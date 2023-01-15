@@ -6,12 +6,12 @@ on:
     branches: [main]
 
 jobs:
-  build-x86_64-linux:
-    name: Build x86_64 Linux
+  build:
+    name: Build PDF
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: cachix/install-nix-action@v17
+      - uses: cachix/install-nix-action@v18
         with:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
@@ -26,3 +26,14 @@ jobs:
           name: resume
           path: |
             resume.pdf
+      - name: Release artifact
+        uses: softprops/action-gh-release@v1
+        if: github.event_name == 'push'
+        with:
+          files: resume.pdf
+          body: |
+            New resume build
+            Commit: ${{ github.sha }}
+            Message: ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false
