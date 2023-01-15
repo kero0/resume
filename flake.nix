@@ -15,7 +15,8 @@
       mkshell = system:
         let pkgs = import nixpkgs { inherit system; };
         in {
-          ${system}.default = pkgs.mkShell { buildInputs = [ (tex pkgs) ]; };
+          ${system}.default =
+            pkgs.mkShell { buildInputs = with pkgs; [ (tex pkgs) emacs-nox ]; };
         };
       mkdoc = system:
         let pkgs = import nixpkgs { inherit system; };
@@ -28,7 +29,7 @@
               fontDirectories = with pkgs; [ noto-fonts ];
             };
             buildPhase = ''
-              ${pkgs.emacs-nox}/bin/emacs --batch -Q      \
+              ${pkgs.emacs-nox}/bin/emacs --batch -Q  \
                 --visit helper.org --load init.el     \
                 --visit resume.org                    \
                 --eval '(org-latex-export-to-latex)'  \
@@ -42,10 +43,35 @@
             '';
           };
         };
+      container = let pkgs = import nixpkgs { system = "x86_64-linux"; };
+      in pkgs.dockerTools.buildImage {
+        name = "resume-builder";
+        tag = "latest";
+        copyToRoot = pkgs.buildEnv {
+          name = "resume-builder";
+          paths = [ (tex pkgs) pkgs.emacs-nox ];
+          pathsToLink = [ "/share" "/bin" ];
+        };
+      };
     in {
       devShells = nixpkgs.lib.foldr nixpkgs.lib.mergeAttrs { }
         (map mkshell supportedSystems);
       packages = nixpkgs.lib.foldr nixpkgs.lib.mergeAttrs { }
         (map mkdoc supportedSystems);
+      inherit container;
+
+      pushImage = let
+        f = system:
+          let pkgs = import nixpkgs { inherit system; };
+          in pkgs.writeShellScriptBin "push-image" ''
+            set -euo pipefail
+            ${pkgs.skopeo}/bin/skopeo copy \
+              --dest-creds $DOCKER_USERNAME:$DOCKER_PASSWORD \
+              --dest-tls-verify=false \
+              --insecure-policy \
+              docker-archive://${container} \
+              docker://docker.io/kero18/resume-builder:latest
+          '';
+      in nixpkgs.lib.foldr nixpkgs.lib.mergeAttrs { } (map f supportedSystems);
     };
 }
