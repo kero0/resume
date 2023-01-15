@@ -24,7 +24,7 @@
           ${system}.default = pkgs.stdenvNoCC.mkDerivation {
             name = "resume";
             src = ./.;
-            nativeBuildInputs = [ (tex pkgs) emacs-nox ];
+            nativeBuildInputs = with pkgs; [ (tex pkgs) emacs-nox ];
             FONTCONFIG_FILE = pkgs.makeFontsConf {
               fontDirectories = with pkgs; [ noto-fonts ];
             };
@@ -42,7 +42,12 @@
         tag = "latest";
         copyToRoot = pkgs.buildEnv {
           name = "resume-builder";
-          paths = [ (tex pkgs) pkgs.emacs-nox ];
+          paths = with pkgs; [
+            (tex pkgs)
+            emacs-nox
+            # not needed by us but makes github happy
+            coreutils
+          ];
           pathsToLink = [ "/share" "/bin" ];
         };
       };
