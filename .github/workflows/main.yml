@@ -1,22 +1,27 @@
-name: CI
+name: Build PDF
 
 on:
   pull_request:
   push:
     branches: [main]
+  paths:
+    - 'resume.org'
+    - 'helper.org'
+    - 'helper.el'
+    - '.github/workflows/main.yml'
+    # flake.nix does not need to be included here
+    # any change to flake.nix will trigger a rebuild of the environment
+    # then it will necessitate a change in helper.org, which will trigger a rebuild of the PDF
 
 jobs:
   build:
     name: Build PDF
     runs-on: ubuntu-22.04
+    container: docker.io/kero18/resume-builder:latest
     steps:
       - uses: actions/checkout@v3
-      - uses: cachix/install-nix-action@v18
-        with:
-          extra_nix_config: |
-            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - name: Build resume
-        run: nix build
+        run: ./build.sh
       - name: Copy artifact
         run: |
           cp result/resume.pdf resume.pdf

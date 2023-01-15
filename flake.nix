@@ -24,18 +24,11 @@
           ${system}.default = pkgs.stdenvNoCC.mkDerivation {
             name = "resume";
             src = ./.;
-            nativeBuildInputs = [ (tex pkgs) ];
+            nativeBuildInputs = [ (tex pkgs) emacs-nox ];
             FONTCONFIG_FILE = pkgs.makeFontsConf {
               fontDirectories = with pkgs; [ noto-fonts ];
             };
-            buildPhase = ''
-              ${pkgs.emacs-nox}/bin/emacs --batch -Q  \
-                --visit helper.org --load init.el     \
-                --visit resume.org                    \
-                --eval '(org-latex-export-to-latex)'  \
-
-              xelatex resume.tex -interaction=nonstopmode
-            '';
+            buildPhase = builtins.readFile ./build.sh;
             installPhase = ''
               mkdir -p $out
               echo $out
