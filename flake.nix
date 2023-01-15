@@ -4,10 +4,6 @@
     let
       supportedSystems =
         [ "x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin" ];
-      emacs = pkgs:
-        with pkgs;
-        ((emacsPackagesFor emacs-nox).emacsWithPackages
-          (epkgs: with epkgs; [ org ]));
       tex = pkgs:
         (pkgs.texlive.combine {
           inherit (pkgs.texlive)
@@ -32,18 +28,12 @@
               fontDirectories = with pkgs; [ noto-fonts ];
             };
             buildPhase = ''
-              ${emacs pkgs}/bin/emacs --batch -Q      \
+              ${pkgs.emacs-nox}/bin/emacs --batch -Q      \
                 --visit helper.org --load init.el     \
                 --visit resume.org                    \
                 --eval '(org-latex-export-to-latex)'  \
 
               xelatex resume.tex -interaction=nonstopmode
-              # latexmk                                 \
-              #   -interaction=nonstopmode              \
-              #   -pdf                                  \
-              #   -xelatex                              \
-              #   -outdir="$PWD"                        \
-              #   resume.tex
             '';
             installPhase = ''
               mkdir -p $out
