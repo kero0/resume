@@ -1,0 +1,68 @@
+#+title: Kirols Bakheat Resume
+#+author: Kirols Bakheat
+
+#+include: ./helper.org
+
+#+latex_header_extra: \newcommand{\githubUser}{kero0}
+#+latex_header_extra: \newcommand{\linkedinUser}{kirols}
+#+latex_header_extra: \newcommand{\website}{kirols.me}
+#+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
+#+latex_header_extra: \newcommand{\phone}{248-250-3241}
+
+I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.
+
+* Experience
+
+{{{experience-start(Core AI/ML/QC FCG R&A *|* Ford Motor Company,September 2022 -- Present)}}}
+- Primary researcher into neuromorphic computing, using Intel's Loihi platform. Designed and wrote tests and gathered data to compare accuracy, efficiency, and speed against traditional computing and quantum computing for our company's use cases
+- Deployed service to GCP for company to provide as a service to a customer. Included writing architecture, pipeline for continuous deployment, backend, and frontend.
+{{{experience-end}}}
+
+{{{experience-start(Teaching Assistant *|* University of Detroit Mercy,August 2021 -- December 2021)}}}
+Designed, wrote, and graded all labs for the University's Electronic Systems (ELEE 3550) course. Gave instruction and assistance to students in the course.
+{{{experience-end}}}
+
+{{{experience-start(IoT Research Intern *|* Ford Motor Company,May 2021 -- July 2021)}}}
+- Wrote API microservice to serve as PoC for Ford's potential IoT platform
+- Prototyped IoT API platform locally and on the cloud
+- Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters, as part of a team
+- Wrote PoC library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
+- Designed and built an example module of a camera with a model for intrusion detection
+{{{experience-end}}}
+
+{{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,June 2020 -- July 2020)}}}
+- Performed security research and some testing for a feature aiming to use a phone with NFC as a key for a vehicle
+- Modified a customer clinic simulation involving work in Carsim, Simulink, Qt desktop, and Qt for android
+- Reviewed and developed test plans for Ford's UWB Phone-as-a-Key feature as part of a team
+{{{experience-end}}}
+
+{{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,May 2019 -- July 2019)}}}
+- Investigated methods of phone to vehicle localization, including Wi-Fi & Bluetooth (BT) RSSI, Wi-Fi time of flight, ultra-wideband, and dead reckoning using sensor fusion on a phone and the tire speed sensors on a vehicle
+- Wrote custom firmware for a device allowing for bidirectional BT to CAN communication
+- Tested and writing of initial design specifications for an NFC tag for BT pairing embedded into a vehicle
+{{{experience-end}}}
+
+* Education
+#+begin_tabularx
+#+latex: {\linewidth}{@{}l c X@{}}
+{{{education(August 2018 -- May 2022,Bachelor of Science in Computer Science,University of Detroit Mercy,3.82)}}}
+{{{education(August 2018 -- May 2022,Bachelor of Electrical Engineering,University of Detroit Mercy,3.82)}}}
+#+end_tabularx
+
+* Skills
+#+attr_latex: :options {2}
+#+begin_multicols
+- Programming Languages: Assembly (ARM), Bash, C, C++, JavaScript, MATLAB, Python, Rust, SystemVerilog, ...
+- Data mining, data analysis, and machine learning
+- Ciruit design and analysis
+- FPGA development
+- Mobile app development (Android Kotlin, React Native, Flutter)
+- Microcontroller development (Arduino, Raspberry Pi, ARM Cortex M)
+- Robotics (ROS)
+- Containerization (Docker, Kubernetes)
+#+end_multicols
+
+* Local Variables :noexport:
+Local Variables:
+eval: (add-hook 'after-save-hook 'org-latex-export-to-latex t t)
+End:

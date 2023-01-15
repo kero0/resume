@@ -1,0 +1,20 @@
+#+title: Readme
+
+This repository contains the source code for my resume. The body of my resume is written in [[./resume.org][org-mode]]. The source code is then converted to LaTeX and then a PDF using emacs and nix. The source code is then pushed to github and the PDF is automatically generated using github actions.
+
+If you want to use this repository as a template for your own resume, you can fork it and then edit the resume.org file. You can then use the following commands to generate the PDF.
+
+- *nix*
+  1. Build with nix
+    #+BEGIN_SRC sh
+    nix build .
+    #+END_SRC
+  2. The resulting PDF will be in =./result/resume.pdf=.
+
+- *emacs* and *xelatex*
+  1. Use emacs to open =resume.org=. You can optionally accept the file local variable to automatically export the LaTeX file every time you save the file.
+  2. Run =org-latex-export-to-latex=. (if you accepted the file local variable, this will happen automatically)
+  3. Run =xelatex= on the resulting =resume.tex= file.
+  #+begin_src sh
+  xelatex resume.tex
+  #+end_src

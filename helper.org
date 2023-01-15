@@ -1,0 +1,118 @@
+#+latex_class: resume
+#+options: toc:nil num:nil author:nil email:nil
+
+#+latex_header: \newcolumntype{C}{>{\centering\arraybackslash}X}
+#+latex_header: \newlength{\fullcollw}
+#+latex_header: \setlength{\fullcollw}{0.47\textwidth}
+#+latex_header: \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+#+latex_header: \titlespacing{\section}{0pt}{10pt}{10pt}
+#+latex_header: \setlist{topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=0.5em}
+
+#+latex: \pagestyle{empty}
+
+* Macros :noexport:
+** experience-start
+#+begin_tabularx
+#+latex: {\linewidth}{ @{}l r@{} }
+@@latex: \textbf{@@$1 @@latex: } & \hfill@@ $2 @@latex: \\[3.75pt] \multicolumn{2}{@{}X@{}}@@
+
+#+attr_latex: [t]
+#+begin_minipage
+#+latex: {\linewidth}
+
+** experience-end
+#+end_minipage
+#+end_tabularx
+** education
+*$3* @@latex: &@@ $2 @@latex: &@@ $1 @@latex: \hfill@@ (GPA: $4/4.0) @@latex: \\@@
+
+* Local Variables :noexport:
+#+begin_src emacs-lisp :results output :session :exports both
+(make-variable-buffer-local 'org-latex-title-command)
+(setq org-latex-title-command
+"\\begin{tabularx}{\\linewidth}{@{} C @{}}
+{\\Huge{%a}} \\\\
+{\\small
+\\href{https://github.com/\\githubUser}{\\raisebox{-0.05\\height}\\faGithub\\ \\githubUser} \\ $|$ \\
+\\href{https://linkedin.com/in/\\linkedinUser}{\\raisebox{-0.05\\height}\\faLinkedin\\ \\linkedinUser} \\ $|$ \\
+\\href{\\website}{\\raisebox{-0.05\\height}\\faGlobe \\ \\website} \\ $|$ \\
+\\href{\\email}{\\raisebox{-0.05\\height}\\faEnvelope \\ \\email} %% \\ $|$ \\
+%%\\href{tel:+000000000000}{\\raisebox{-0.05\\height}\\faMobile \\ +00.00.000.000} \\\\
+}
+\\end{tabularx}")
+
+(make-variable-buffer-local 'org-latex-classes)
+(setq org-latex-classes
+      '(("resume"
+         "\\documentclass[12pt, a4paper]{article}"
+         ("\\section{%s}" . "\\section*{%s}")
+         ("\\subsection{%s}" . "\\subsection*{%s}")
+         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+         ("\\paragraph{%s}" . "\\paragraph*{%s}")
+         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+(make-variable-buffer-local 'org-latex-default-class)
+(setq org-latex-default-class "resume")
+
+(make-variable-buffer-local 'org-latex-default-packages-alist)
+(setq org-latex-default-packages-alist '())
+
+(make-variable-buffer-local 'org-latex-packages-alist)
+(setq org-latex-packages-alist '(
+                            ("" "enumitem" t)
+                            ("" "fontawesome5" t)
+                            ("scale=0.9" "geometry" t)
+                            ("" "hyperref" t)
+                            ("" "multicol" t)
+                            ("" "tabularx" t)
+                            ("" "parskip" t)
+                            ("" "titlesec" t)
+                            ("" "url" t)
+                            ("usenames, dvipsnames" "xcolor" t)
+                                ))
+
+(make-variable-buffer-local 'org-latex-hyperref-template)
+(setq org-latex-hyperref-template
+"
+\\definecolor{linkcolor}{rgb}{0,0.2,0.6}
+\\hypersetup {
+   pdftitle=%t,
+   pdfauthor=%a,
+   pdfsubject=%a's Resume,
+   unicode=true,
+   pdfstartview=FitH,
+   pdfpagelayout=OneColumn,
+   pdfpagemode=UseOutlines,
+   colorlinks,
+   breaklinks,
+   urlcolor=linkcolor,
+   linkcolor=linkcolor,
+}
+")
+
+(make-variable-buffer-local 'org-cite-export-processors)
+(setq org-cite-export-processors '())
+
+(setq my-macros
+      (mapcar
+       (lambda (x)
+         (string-match "\\*\\* \\([^\n]+\\)\n\\(.*\\)" x)
+         (cons (match-string 1 x)
+               (substring x (match-beginning 2))))
+       (org-element-map (org-element-parse-buffer) 'headline
+         (lambda (x)
+           (and (= (org-element-property :level x) 2)
+                (string=
+                 (org-element-property
+                  :raw-value
+                  (org-element-property :parent x)) "Macros")
+                (buffer-substring-no-properties
+                 (org-element-property :begin x)
+                 (org-element-property :end x)))
+       ))))
+
+(defadvice org-macro--collect-macros (around add-macros activate)
+  (let ((r ad-do-it))
+    (setq ad-return-value
+          (append my-macros r))))
+#+end_src
