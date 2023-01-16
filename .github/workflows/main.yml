@@ -1,8 +1,5 @@
 name: Build PDF
 
-# flake.nix does not need to be included here
-# any change to flake.nix will trigger a rebuild of the environment
-# then it will necessitate a change in helper.org, which will trigger a rebuild of the PDF
 on:
   pull_request:
   push:
@@ -12,6 +9,10 @@ on:
       - 'helper.org'
       - 'helper.el'
       - '.github/workflows/main.yml'
+  workflow_run:
+    workflows: ["Update Docker Image"]
+    types:
+      - completed
 jobs:
   build:
     name: Build PDF
