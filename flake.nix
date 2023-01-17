@@ -40,16 +40,36 @@
       in pkgs.dockerTools.buildImage {
         name = "resume-builder";
         tag = "latest";
-        copyToRoot = pkgs.buildEnv {
-          name = "resume-builder";
-          paths = with pkgs; [
-            (tex pkgs)
-            emacs-nox
-            # not needed by us but makes github happy
-            coreutils
+        config = {
+          Env = [
+            "LD_LIBRARY_PATH=${
+              pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib pkgs.glibc]
+            }"
           ];
-          pathsToLink = [ "/share" "/bin" ];
         };
+        copyToRoot = let
+          base = pkgs.buildEnv {
+            name = "github-actions-req";
+            paths = with pkgs; [
+              bash
+              coreutils
+              less
+              stdenv.cc.cc.lib
+              gnutar
+              gzip
+            ];
+            pathsToLink = [ "/lib" "/lib64" "/bin"];
+          };
+          env = pkgs.buildEnv {
+            name = "resume-builder";
+            paths = with pkgs; [
+              (tex pkgs)
+              emacs-nox
+            ];
+            extraPrefix = "/usr";
+            pathsToLink = [ "/share" "/bin" ];
+          };
+        in [ base env "${pkgs.glibc}" ];
       };
     in {
       devShells = nixpkgs.lib.foldr nixpkgs.lib.mergeAttrs { }
