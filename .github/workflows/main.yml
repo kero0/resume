@@ -29,13 +29,10 @@ jobs:
           path: |
             resume.pdf
       - name: Release artifact
-        uses: softprops/action-gh-release@v1
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           files: resume.pdf
-          body: |
-            New resume build
-            Commit: ${{ github.sha }}
-            Message: ${{ github.event.head_commit.message }}
-          draft: false
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
           prerelease: false
+          title: "Resume"
