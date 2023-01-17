@@ -14,7 +14,7 @@
 ** experience-start
 #+begin_tabularx
 #+latex: {\linewidth}{ @{}l r@{} }
-@@latex: \textbf{@@$1 @@latex: } & \hfill@@ $2 @@latex: \\[3.75pt] \multicolumn{2}{@{}X@{}}@@
+@@latex: \textbf{@@$1 @@latex: } & \hfill \textit{@@ $2 @@latex: } \\[3.75pt] \multicolumn{2}{@{}X@{}}@@
 
 #+attr_latex: [t]
 #+begin_minipage
@@ -24,7 +24,7 @@
 #+end_minipage
 #+end_tabularx
 ** education
-*$3* @@latex: &@@ $2 @@latex: &@@ $1 @@latex: \hfill@@ (GPA: $4/4.0) @@latex: \\@@
+*$3* @@latex: &@@ $2 @@latex: & \textit{@@ $1 @@latex: } \hfill@@ (GPA: $4/4.0) @@latex: \\@@
 
 * Local Variables :noexport:
 #+begin_src emacs-lisp :results output :session :exports both
@@ -35,7 +35,7 @@
 {\\small
 \\href{https://github.com/\\githubUser}{\\raisebox{-0.05\\height}\\faGithub\\ \\githubUser} \\ $|$ \\
 \\href{https://linkedin.com/in/\\linkedinUser}{\\raisebox{-0.05\\height}\\faLinkedin\\ \\linkedinUser} \\ $|$ \\
-\\href{\\website}{\\raisebox{-0.05\\height}\\faGlobe \\ \\website} \\ $|$ \\
+%%\\href{\\website}{\\raisebox{-0.05\\height}\\faGlobe \\ \\website} \\ $|$ \\
 \\href{\\email}{\\raisebox{-0.05\\height}\\faEnvelope \\ \\email} %% \\ $|$ \\
 %%\\href{tel:+000000000000}{\\raisebox{-0.05\\height}\\faMobile \\ +00.00.000.000} \\\\
 }

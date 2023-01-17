@@ -14,7 +14,7 @@ I am a motivated and passionate software engineer with knowledge of a wide range
 * Experience
 
 {{{experience-start(Core AI/ML/QC FCG R&A *|* Ford Motor Company,September 2022 -- Present)}}}
-- Primary researcher into neuromorphic computing, using Intel's Loihi platform. Designed and wrote tests and gathered data to compare accuracy, efficiency, and speed against traditional computing and quantum computing for our company's use cases
+- Lead researcher into neuromorphic computing, using Intel's Loihi platform. Designing and writing tests and gathering data to compare accuracy, efficiency, and speed against traditional computing and quantum computing for our use cases
 - Deployed service to GCP for company to provide as a service to a customer. Included writing architecture, pipeline for continuous deployment, backend, and frontend.
 {{{experience-end}}}
 
@@ -23,10 +23,10 @@ Designed, wrote, and graded all labs for the University's Electronic Systems (EL
 {{{experience-end}}}
 
 {{{experience-start(IoT Research Intern *|* Ford Motor Company,May 2021 -- July 2021)}}}
-- Wrote API microservice to serve as PoC for Ford's potential IoT platform
+- Wrote API microservice to serve as proof of concept for Ford's potential IoT platform
 - Prototyped IoT API platform locally and on the cloud
 - Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters, as part of a team
-- Wrote PoC library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
+- Wrote proof of concept library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
 - Designed and built an example module of a camera with a model for intrusion detection
 {{{experience-end}}}
 
@@ -44,7 +44,7 @@ Designed, wrote, and graded all labs for the University's Electronic Systems (EL
 
 * Education
 #+begin_tabularx
-#+latex: {\linewidth}{@{}l c X@{}}
+#+latex: {\linewidth}{@{}l l X@{}}
 {{{education(August 2018 -- May 2022,Bachelor of Science in Computer Science,University of Detroit Mercy,3.82)}}}
 {{{education(August 2018 -- May 2022,Bachelor of Electrical Engineering,University of Detroit Mercy,3.82)}}}
 #+end_tabularx
@@ -52,7 +52,7 @@ Designed, wrote, and graded all labs for the University's Electronic Systems (EL
 * Skills
 #+attr_latex: :options {2}
 #+begin_multicols
-- Programming Languages: Assembly (ARM), Bash, C, C++, JavaScript, MATLAB, Python, Rust, SystemVerilog, ...
+- Programming Languages: Assembly (ARM), Bash, C, C++, Dart, Haskell, JavaScript, MATLAB, Python, Rust, SystemVerilog
 - Data mining, data analysis, and machine learning
 - Ciruit design and analysis
 - FPGA development
