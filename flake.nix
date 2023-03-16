@@ -43,7 +43,7 @@
         config = {
           Env = [
             "LD_LIBRARY_PATH=${
-              pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib pkgs.glibc]
+              pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib pkgs.glibc ]
             }"
           ];
         };
@@ -58,14 +58,11 @@
               gnutar
               gzip
             ];
-            pathsToLink = [ "/lib" "/lib64" "/bin"];
+            pathsToLink = [ "/lib" "/lib64" "/bin" ];
           };
           env = pkgs.buildEnv {
             name = "resume-builder";
-            paths = with pkgs; [
-              (tex pkgs)
-              emacs-nox
-            ];
+            paths = with pkgs; [ (tex pkgs) emacs-nox ];
             extraPrefix = "/usr";
             pathsToLink = [ "/share" "/bin" ];
           };

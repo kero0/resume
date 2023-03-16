@@ -5,21 +5,23 @@
 
 #+latex_header_extra: \newcommand{\githubUser}{kero0}
 #+latex_header_extra: \newcommand{\linkedinUser}{kirols}
-#+latex_header_extra: \newcommand{\website}{kirols.me}
 #+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
 #+latex_header_extra: \newcommand{\phone}{248-250-3241}
 
 I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.
 
 * Experience
-
-{{{experience-start(Core AI/ML/QC FCG R&A *|* Ford Motor Company,September 2022 -- Present)}}}
-- Lead researcher into neuromorphic computing, using Intel's Loihi platform. Designing and writing tests and gathering data to compare accuracy, efficiency, and speed against traditional computing and quantum computing for our use cases
-- Deployed service to GCP for company to provide as a service to a customer. Included writing architecture, pipeline for continuous deployment, backend, and frontend.
+{{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- Present)}}}
+- Worked on launching Super Duty F-250, F-350, and F-450 trucks
+- Responsible for managing diagnostic trouble codes (DTCs) and the engineers responsible for each DTC
+- Responsible for making sure that any issues were resolved before the launch of the vehicle
 {{{experience-end}}}
 
-{{{experience-start(Teaching Assistant *|* University of Detroit Mercy,August 2021 -- December 2021)}}}
-Designed, wrote, and graded all labs for the University's Electronic Systems (ELEE 3550) course. Gave instruction and assistance to students in the course.
+{{{experience-start(Core AI/ML/QC FCG *|* Ford Motor Company,September 2022 -- February 2023)}}}
+- Primary researcher into neuromorphic computing, using Intel's Loihi platform
+- Designing and writing tests and gathering data to compare accuracy, efficiency, and speed against traditional computing and quantum computing
+- Formulated energy-optimized routing algorithm, based on real-world Ford service, for Loihi
+- Deployed service to GCP for company to provide as a service to a customer. Included writing architecture, pipeline for continuous deployment, backend, and frontend.
 {{{experience-end}}}
 
 {{{experience-start(IoT Research Intern *|* Ford Motor Company,May 2021 -- July 2021)}}}
@@ -37,9 +39,9 @@ Designed, wrote, and graded all labs for the University's Electronic Systems (EL
 {{{experience-end}}}
 
 {{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,May 2019 -- July 2019)}}}
-- Investigated methods of phone to vehicle localization, including Wi-Fi & Bluetooth (BT) RSSI, Wi-Fi time of flight, ultra-wideband, and dead reckoning using sensor fusion on a phone and the tire speed sensors on a vehicle
+- Investigated methods of phone to vehicle localization using only existing hardware for no additional cost
 - Wrote custom firmware for a device allowing for bidirectional BT to CAN communication
-- Tested and writing of initial design specifications for an NFC tag for BT pairing embedded into a vehicle
+- Designed and tested initial specifications for an NFC tag for BT pairing embedded into a vehicle
 {{{experience-end}}}
 
 * Education
