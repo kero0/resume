@@ -46,9 +46,8 @@ I am a motivated and passionate software engineer with knowledge of a wide range
 
 * Education
 #+begin_tabularx
-#+latex: {\linewidth}{@{}l l X@{}}
-{{{education(August 2018 -- May 2022,Bachelor of Science in Computer Science,University of Detroit Mercy,3.82)}}}
-{{{education(August 2018 -- May 2022,Bachelor of Electrical Engineering,University of Detroit Mercy,3.82)}}}
+#+latex: {\linewidth}{@{}l X p{0.3\hsize}}
+{{{education(August 2018 -- May 2022,Bachelor of Science in Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,3.82)}}}
 #+end_tabularx
 
 * Skills
