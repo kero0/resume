@@ -54,11 +54,9 @@ I am a motivated and passionate software engineer with knowledge of a wide range
 * Skills
 #+attr_latex: :options {2}
 #+begin_multicols
-- Programming Languages: Assembly (ARM), Bash, C, C++, Dart, Haskell, JavaScript, MATLAB, Python, Rust, SystemVerilog
+- Programming Languages: ARM Assembly, Bash, C, Haskell, JavaScript, MATLAB, Python, Rust
 - Data mining, data analysis, and machine learning
-- Ciruit design and analysis
 - FPGA development
-- Mobile app development (Android Kotlin, React Native, Flutter)
 - Microcontroller development (Arduino, Raspberry Pi, ARM Cortex M)
 - Robotics (ROS)
 - Containerization (Docker, Kubernetes)
