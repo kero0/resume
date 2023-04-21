@@ -39,12 +39,14 @@
 \\href{\\email}{\\raisebox{-0.05\\height}\\faEnvelope \\ \\email} %% \\ $|$ \\
 %%\\href{tel:+000000000000}{\\raisebox{-0.05\\height}\\faMobile \\ +00.00.000.000} \\\\
 }
-\\end{tabularx}")
+\\end{tabularx}
+
+\\header")
 
 (make-variable-buffer-local 'org-latex-classes)
 (setq org-latex-classes
       '(("resume"
-         "\\documentclass[12pt, a4paper]{article}"
+         "\\documentclass[11pt, a4paper]{article}"
          ("\\section{%s}" . "\\section*{%s}")
          ("\\subsection{%s}" . "\\subsection*{%s}")
          ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
