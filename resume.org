@@ -12,9 +12,10 @@
 
 * Experience
 {{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- Present)}}}
-- Worked on launching Super Duty F-250, F-350, and F-450 trucks
+- Worked on launching 23MY Super Duty F-250, F-350, F-450, F-550, and F-600 trucks
 - Responsible for managing diagnostic trouble codes (DTCs) and the engineers responsible for each DTC
-- Responsible for making sure that any issues were resolved before the launch of the vehicle
+- Helped with issue tracking and resolution
+- Responsible for making sure that issues were identified and resolved before the launch
 {{{experience-end}}}
 
 {{{experience-start(Core AI/ML/QC FCG *|* Ford Motor Company,September 2022 -- February 2023)}}}
@@ -33,8 +34,8 @@
 {{{experience-end}}}
 
 {{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,June 2020 -- July 2020)}}}
-- Performed security research and some testing for a feature aiming to use a phone with NFC as a key for a vehicle
-- Modified a customer clinic simulation involving work in Carsim, Simulink, Qt desktop, and Qt for android
+- Security research for a feature aiming to use a phone with NFC as a key for a vehicle
+- Customer clinic simulation involving work in Carsim, Simulink, Qt desktop, and Qt for android
 - Reviewed and developed test plans for Ford's UWB Phone-as-a-Key feature as part of a team
 {{{experience-end}}}
 
