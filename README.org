@@ -1,6 +1,6 @@
 #+title: Readme
 
-[[CI][file:https://github.com/kero0/resume/actions/workflows/main.yml/badge.svg]]
+[[main][file:https://github.com/kero0/resume/actions/workflows/main.yml/badge.svg]]
 [[https://github.com/kero0/resume/actions/workflows/main.yml]]
 
 This repository contains the source code for my resume. The body of my resume is written in [[./resume.org][org-mode]]. The source code is then converted to LaTeX and then a PDF using emacs and nix. The source code is then pushed to github and the PDF is automatically generated using github actions.
