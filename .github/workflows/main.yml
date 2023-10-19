@@ -38,6 +38,6 @@ jobs:
             resume-${{ github.sha }}.pdf
             Kirols-Bakheat-Resume.pdf
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "${{ github.sha }}"
+          automatic_release_tag: "Release-$(head -c 8 '${{ github.sha }}')"
           prerelease: false
           title: "Resume PDF"
