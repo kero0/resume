@@ -11,8 +11,8 @@
 #+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to managing engineering concerns. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
 
 * Experience
-{{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- Present)}}}
-- Worked on launching 23MY Super Duty F-250, F-350, F-450, F-550, and F-600 trucks
+{{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- July 2023)}}}
+- Worked on launching 23MY & 24MY Super Duty trucks
 - Responsible for managing diagnostic trouble codes (DTCs) and the engineers responsible for each DTC
 - Helped with issue tracking and resolution
 - Responsible for making sure that issues were identified and resolved before the launch
