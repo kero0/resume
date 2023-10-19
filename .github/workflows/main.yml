@@ -21,21 +21,23 @@ jobs:
       - uses: actions/checkout@v3
       - name: Build resume
         run: ./build.sh
+      - name: Rename File
+        run: |
+          cp resume.pdf resume-${{ github.sha }}.pdf
+          mv resume.pdf Kirols-Bakheat-Resume.pdf
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: resume
           path: |
-            resume.pdf
-      - name: Rename File
-        run: |
-          cp resume.pdf resume-${{ github.sha }}.pdf
-          mv resume.pdf Kirols-Bakheat-Resume.pdf
+            resume-${{ github.sha }}.pdf
       - name: Release artifact
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          files: resume.pdf
+          files: |
+            resume-${{ github.sha }}.pdf
+            Kirols-Bakheat-Resume.pdf
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "${{ github.ref }}"
+          automatic_release_tag: "Release-${{ github.sha }}"
           prerelease: false
           title: "Resume PDF"
