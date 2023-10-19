@@ -34,9 +34,9 @@ jobs:
       - name: Release artifact
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          files:
-            - resume-${{ github.sha }}.pdf
-            - Kirols-Bakheat-Resume.pdf
+          files: |
+            resume-${{ github.sha }}.pdf
+            Kirols-Bakheat-Resume.pdf
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "${{ github.ref }}"
           prerelease: false
