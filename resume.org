@@ -8,7 +8,7 @@
 #+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
 #+latex_header_extra: \newcommand{\phone}{248-250-3241}
 
-#+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to managing engineering concerns. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
+#+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to efficiently managing a program. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
 
 * Experience
 {{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- July 2023)}}}
