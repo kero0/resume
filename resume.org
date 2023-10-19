@@ -44,12 +44,6 @@
 - Reviewed and developed test plans for Ford's UWB Phone-as-a-Key feature as part of a team
 {{{experience-end}}}
 
-{{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,May 2019 -- July 2019)}}}
-- Investigated methods of phone to vehicle localization using only existing hardware for no additional cost
-- Wrote custom firmware for a device allowing for bidirectional BT to CAN communication
-- Designed and tested initial specifications for an NFC tag for BT pairing embedded into a vehicle
-{{{experience-end}}}
-
 * Education
 #+begin_tabularx
 #+latex: {\linewidth}{@{}l X p{0.3\hsize}}
