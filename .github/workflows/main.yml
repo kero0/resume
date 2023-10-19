@@ -6,7 +6,7 @@ on:
     paths:
       - 'resume.org'
       - 'helper.org'
-      - 'helper.el'
+      - 'init.el'
       - '.github/workflows/main.yml'
   workflow_run:
     workflows: ["Update Docker Image"]
@@ -27,11 +27,15 @@ jobs:
           name: resume
           path: |
             resume.pdf
+      - name: Rename File
+        run: |
+          cp resume.pdf resume-${{ github.sha }}.pdf
+          mv resume.pdf Kirols-Bakheat-Resume.pdf
       - name: Release artifact
         uses: marvinpinto/action-automatic-releases@latest
         with:
           files: resume.pdf
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
+          automatic_release_tag: "${{ github.ref }}"
           prerelease: false
-          title: "Resume"
+          title: "Resume PDF"
