@@ -12,8 +12,8 @@
 
 * Experience
 {{{experience-start(Sensing Technologies and Algorithms FCG *|* Ford Motor Company,July 2023 -- Present)}}}
-- Working to develop more accurate 3-D driver positioning for AR applications; using multiple cameras, additional sensors, and machine learning
-- Working on occupant detection for safety systems
+- Working to develop more accurate 3D driver positioning for AR applications; using multiple cameras, additional sensors, and machine learning
+- Created test plan to accurately test 3D eye location with sub-millimeter accuracy to evaluate planned supplier and additional sensors
 {{{experience-end}}}
 
 {{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- July 2023)}}}
