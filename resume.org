@@ -11,13 +11,18 @@
 #+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to efficiently managing a program. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
 
 * Experience
-{{{experience-start(Sensing Technologies and Algorithms FCG *|* Ford Motor Company,July 2023 -- Present)}}}
-- Working to develop more accurate 3D driver positioning for AR applications; using multiple cameras, additional sensors, and machine learning
-- Created test plan to accurately test 3D eye location with sub-millimeter accuracy to evaluate planned supplier and additional sensors
+{{{experience-start(Infotainment Systems Software Engineer FCG *|* Ford Motor Company,March 2024 -- Present)}}}
+- Working on algorithms for mass and road load force estimation
+- Writing android platform code for in vehicle route energy estimation
+{{{experience-end}}}
+
+{{{experience-start(Sensing Technologies and Algorithms FCG *|* Ford Motor Company,July 2023 -- March 2024)}}}
+- Developed more accurate 3D driver positioning for AR applications; using multiple cameras, additional sensors, and machine learning
+- Created and executed test plan to accurately test 3D eye location with sub-millimeter accuracy to evaluate planned supplier and additional sensors
 {{{experience-end}}}
 
 {{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- July 2023)}}}
-- Worked on launching 23MY & 24MY Super Duty trucks
+- Launched 23MY & 24MY Super Duty trucks
 - Responsible for managing diagnostic trouble codes (DTCs) and the engineers responsible for each DTC
 - Helped with issue tracking and resolution
 - Responsible for making sure that issues were identified and resolved before the launch
@@ -36,12 +41,6 @@
 - Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters, as part of a team
 - Wrote proof of concept library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
 - Designed and built an example module of a camera with a model for intrusion detection
-{{{experience-end}}}
-
-{{{experience-start(Digital Cockpit Technologies & Features Intern *|* Ford Motor Company,June 2020 -- July 2020)}}}
-- Security research for a feature aiming to use a phone with NFC as a key for a vehicle
-- Customer clinic simulation involving work in Carsim, Simulink, Qt desktop, and Qt for android
-- Reviewed and developed test plans for Ford's UWB Phone-as-a-Key feature as part of a team
 {{{experience-end}}}
 
 * Education
