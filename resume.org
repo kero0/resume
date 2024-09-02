@@ -12,8 +12,9 @@
 
 * Experience
 {{{experience-start(Infotainment Systems Software Engineer FCG *|* Ford Motor Company,March 2024 -- Present)}}}
-- Working on algorithms for mass and road load force estimation
-- Writing android platform code for in vehicle route energy estimation
+- Implementing algorithms for mass and road load force estimation
+- Writing Android platform code for in vehicle route energy estimation
+- Writing Android Open Source Platform native applications
 {{{experience-end}}}
 
 {{{experience-start(Sensing Technologies and Algorithms FCG *|* Ford Motor Company,July 2023 -- March 2024)}}}
@@ -52,7 +53,7 @@
 * Skills
 #+attr_latex: :options {2}
 #+begin_multicols
-- Programming Languages: ARM Assembly, Bash, C, Haskell, JavaScript, MATLAB, Python, Rust
+- Programming Languages: ARM Assembly, Bash, C, C++, Haskell, JavaScript, MATLAB, Python, Rust
 - Data mining, data analysis, and machine learning
 - FPGA development
 - Microcontroller development (Arduino, Raspberry Pi, ARM Cortex M)
