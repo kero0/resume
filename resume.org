@@ -11,7 +11,7 @@
 #+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to efficiently managing a program. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
 
 * Experience
-{{{experience-start(Infotainment Systems Software Engineer FCG *|* Ford Motor Company,March 2024 -- Present)}}}
+{{{experience-start(Infotainment Systems Software Engineer *|* Ford Motor Company,March 2024 -- Present)}}}
 - Implementing algorithms for mass and road load force estimation
 - Writing Android platform code for in vehicle route energy estimation
 - Writing Android Open Source Platform native applications
@@ -39,7 +39,7 @@
 {{{experience-start(IoT Research Intern *|* Ford Motor Company,May 2021 -- July 2021)}}}
 - Wrote API microservice to serve as proof of concept for Ford's potential IoT platform
 - Prototyped IoT API platform locally and on the cloud
-- Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters, as part of a team
+- Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters
 - Wrote proof of concept library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
 - Designed and built an example module of a camera with a model for intrusion detection
 {{{experience-end}}}
@@ -51,15 +51,9 @@
 #+end_tabularx
 
 * Skills
-#+attr_latex: :options {2}
-#+begin_multicols
-- Programming Languages: ARM Assembly, Bash, C, C++, Haskell, JavaScript, MATLAB, Python, Rust
-- Data mining, data analysis, and machine learning
-- FPGA development
-- Microcontroller development (Arduino, Raspberry Pi, ARM Cortex M)
-- Robotics (ROS)
-- Containerization (Docker, Kubernetes)
-#+end_multicols
+- *Programming Languages:* ARM Assembly, Bash, C, C++, Haskell, Java, JavaScript, Kotlin, MATLAB, Python, Rust
+- *Software and Tools:* Android Studio, CI/CD, Docker, Git, GitHub Actions, Google Cloud Platform (GCP), Jenkins, Jupyter Notebook, Kubernetes, Nix
+- *Frameworks:* Android, Android Native, Numpy, OpenCV, Pandas
 
 * Local Variables :noexport:
 Local Variables:
