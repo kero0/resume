@@ -24,7 +24,7 @@
 #+end_minipage
 #+end_tabularx
 ** education
-*$3* @@latex: &@@ $2 @@latex: & \hfill \hspace*{\fill}\raggedleft{ \textit{@@ $1 @@latex: } \newline @@ (GPA: $4/4.0) @@latex: }\\@@
+*$3* @@latex: &@@ $2 @@latex: & \textit{@@ $1 @@latex: } \newline @@ $4 @@latex: \\@@
 
 * Local Variables :noexport:
 #+begin_src emacs-lisp :results output :session :exports both

@@ -8,52 +8,56 @@
 #+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
 #+latex_header_extra: \newcommand{\phone}{248-250-3241}
 
-#+latex_header_extra: \newcommand{\header}{I am a motivated and passionate software engineer with knowledge of a wide range of areas in both computer science and hardware principles. I have experience on a breadth of areas, from developing new technologies to efficiently managing a program. I am a quick learner and have a strong desire to learn new things and to contribute with my knowledge.}
+#+latex_header_extra: \newcommand{\header}{Innovative Software Engineer with a strong background in computer science, electrical engineering, and applied research. Skilled in embedded systems, machine learning, and full-stack development, with proven success in developing algorithms, debugging complex systems, and leading cross-functional programs. Adept at solving challenging technical problems, deploying scalable solutions, and driving projects from concept to launch. Strong foundation in both software and hardware engineering.}
 
 * Experience
-{{{experience-start(Infotainment Systems Software Engineer *|* Ford Motor Company,March 2024 -- Present)}}}
-- Implementing algorithms for mass and road load force estimation
-- Writing Android platform code for in vehicle route energy estimation
-- Writing Android Open Source Platform native applications
+{{{experience-start(Software Engineer - Infotainment Systems *|* Ford Motor Company,March 2024 -- Present)}}}
+- Diagnose and resolve performance issues in Android-based infotainment systems, including crashes, black screens, and unresponsive apps.
+- Debug and deliver fixes for Android core components, contributing patches upstream.
+- Develop and implement methods to dynaimcally estimate vehicle parameters for energy based vehicle routing.
+- Implement platform-level Android code to optimize in-vehicle energy and performance.
 {{{experience-end}}}
 
-{{{experience-start(Sensing Technologies and Algorithms FCG *|* Ford Motor Company,July 2023 -- March 2024)}}}
-- Developed more accurate 3D driver positioning for AR applications; using multiple cameras, additional sensors, and machine learning
-- Created and executed test plan to accurately test 3D eye location with sub-millimeter accuracy to evaluate planned supplier and additional sensors
+{{{experience-start(Research Engineer - Sensors and Algorithms *|* Ford Motor Company,July 2023 -- March 2024)}}}
+- Engineered high-accuracy 3D driver positioning system for AR applications using multi-camera setups, additional sensors, and ML models.
+- Designed and executed precision test plans achieving sub-millimeter accuracy in 3D eye tracking.
 {{{experience-end}}}
 
-{{{experience-start(Program Management FCG *|* Ford Motor Company,March 2023 -- July 2023)}}}
-- Launched 23MY & 24MY Super Duty trucks
-- Responsible for managing diagnostic trouble codes (DTCs) and the engineers responsible for each DTC
-- Helped with issue tracking and resolution
-- Responsible for making sure that issues were identified and resolved before the launch
+{{{experience-start(Program Manager - Super Duty *|* Ford Motor Company,March 2023 -- July 2023)}}}
+- Successfully launched 2023MY & 2024MY Super Duty trucks by managing issue resolution and launch readiness.
+- Oversaw diagnostic trouble codes (DTCs), ensuring accountability and timely fixes across engineering teams.
+- Improved issue tracking workflows to accelerate pre-launch problem resolution.
 {{{experience-end}}}
 
-{{{experience-start(Core AI/ML/QC FCG *|* Ford Motor Company,September 2022 -- February 2023)}}}
-- Primary researcher into neuromorphic computing, using Intel's Loihi platform
-- Designing and writing tests and gathering data to compare accuracy, efficiency, and speed against traditional computing and quantum computing
-- Formulated energy-optimized routing algorithm, based on real-world Ford service, for Loihi
-- Deployed service to GCP for company to provide as a service to a customer. Included writing architecture, pipeline for continuous deployment, backend, and frontend.
+{{{experience-start(Research Engineer - Core AI/ML/QC *|* Ford Motor Company,September 2022 -- February 2023)}}}
+- Conducted pioneering research on neuromorphic computing with Intel’s Loihi platform.
+- Developed an energy-optimized routing algorithm for real-world Ford service applications.
+- Built and deployed a cloud service on GCP, including architecture design, CI/CD pipelines, backend, and frontend integration.
+- Benchmarked accuracy, efficiency, and performance across neuromorphic, classical, and quantum computing paradigms.
 {{{experience-end}}}
 
-{{{experience-start(IoT Research Intern *|* Ford Motor Company,May 2021 -- July 2021)}}}
-- Wrote API microservice to serve as proof of concept for Ford's potential IoT platform
-- Prototyped IoT API platform locally and on the cloud
-- Designed both cloud and on-vehicle architecture and security for future generation interface for upfitters
-- Wrote proof of concept library for securely allowing upfitter programs to communicate both with the vehicle and add in modules
-- Designed and built an example module of a camera with a model for intrusion detection
+{{{experience-start(Research Intern - IoT *|* Ford Motor Company,May 2021 -- July 2021)}}}
+- Built a proof-of-concept IoT API microservice, prototyped locally and in the cloud.
+- Designed secure cloud-to-vehicle architecture enabling modular integration for upfitters.
+- Developed an IoT library for secure vehicle communication, with an intrusion detection camera module as proof of concept.
 {{{experience-end}}}
 
 * Education
+#+latex: \newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
+#+attr_latex: :options {\linewidth}{Y Y >{}Y}
 #+begin_tabularx
-#+latex: {\linewidth}{@{}l X p{0.3\hsize}}
-{{{education(August 2018 -- May 2022,Bachelor of Science in Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,3.82)}}}
+{{{education(Expected: May 2027,Master of Science\, Computer Science ,Georgia Institute of Technology,)}}}
+{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,(GPA: 3.82/4.0))}}}
 #+end_tabularx
 
 * Skills
-- *Programming Languages:* ARM Assembly, Bash, C, C++, Haskell, Java, JavaScript, Kotlin, MATLAB, Python, Rust
-- *Software and Tools:* Android Studio, CI/CD, Docker, Git, GitHub Actions, Google Cloud Platform (GCP), Jenkins, Jupyter Notebook, Kubernetes, Nix
-- *Frameworks:* Android, Android Native, Numpy, OpenCV, Pandas
+#+attr_latex: :options {2}
+#+begin_multicols
+- *Languages:* Python, Rust, C, ARM Assembly, Bash, JavaScript, Haskell, MATLAB
+- *Systems & Hardware:* FPGA development, microcontroller programming (Arduino, Raspberry Pi, ARM Cortex-M), embedded systems
+- *Software & Tools:* Docker, Kubernetes, ROS, CI/CD, cloud platforms (GCP)
+- *Specialties:* Machine learning, data mining, computer vision, algorithms, debugging complex systems
+#+end_multicols
 
 * Local Variables :noexport:
 Local Variables:
