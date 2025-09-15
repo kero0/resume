@@ -8,7 +8,7 @@
 #+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
 #+latex_header_extra: \newcommand{\phone}{248-250-3241}
 
-#+latex_header_extra: \newcommand{\header}{Innovative Software Engineer with a strong background in computer science, electrical engineering, and applied research. Skilled in embedded systems, machine learning, and full-stack development, with proven success in developing algorithms, debugging complex systems, and leading cross-functional programs. Adept at solving challenging technical problems, deploying scalable solutions, and driving projects from concept to launch. Strong foundation in both software and hardware engineering.}
+#+latex_header_extra: \newcommand{\header}{Innovative Software Engineer with a strong background in computer science, electrical engineering, and applied research. Skilled in embedded systems, machine learning, and full-stack development, with proven success in developing algorithms, debugging complex systems, and leading cross-functional programs. Adept at solving challenging technical problems, deploying scalable solutions, and driving projects from concept to launch.}
 
 * Experience
 {{{experience-start(Software Engineer - Infotainment Systems *|* Ford Motor Company,March 2024 -- Present)}}}
@@ -47,7 +47,7 @@
 #+attr_latex: :options {\linewidth}{Y Y >{}Y}
 #+begin_tabularx
 {{{education(Expected: May 2027,Master of Science\, Computer Science ,Georgia Institute of Technology,)}}}
-{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,(GPA: 3.82/4.0))}}}
+{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,)}}}
 #+end_tabularx
 
 * Skills
