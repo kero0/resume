@@ -14,8 +14,8 @@
 {{{experience-start(Software Engineer - Infotainment Systems *|* Ford Motor Company,March 2024 -- Present)}}}
 - Diagnose and resolve performance issues in Android-based infotainment systems, including crashes, black screens, and unresponsive apps.
 - Debug and deliver fixes for Android core components, contributing patches upstream.
-- Develop and implement methods to dynaimcally estimate vehicle parameters for energy based vehicle routing.
-- Implement platform-level Android code to optimize in-vehicle energy and performance.
+- Developed tools for automating log collection and initial triaging
+- Develop and implement methods to dynamically estimate vehicle parameters for energy based vehicle routing.
 {{{experience-end}}}
 
 {{{experience-start(Research Engineer - Sensors and Algorithms *|* Ford Motor Company,July 2023 -- March 2024)}}}
@@ -46,8 +46,8 @@
 #+latex: \newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
 #+attr_latex: :options {\linewidth}{Y Y >{}Y}
 #+begin_tabularx
-{{{education(Expected: May 2027,Master of Science\, Computer Science ,Georgia Institute of Technology,)}}}
-{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,(GPA: 3.82/4.0))}}}
+{{{education(Expected: May 2027,Master of Science\, Computer Science ,Georgia Institute of Technology,(GPA: 3.0/4.0))}}}
+{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,(GPA: 3.8/4.0))}}}
 #+end_tabularx
 
 * Skills
@@ -62,4 +62,5 @@
 * Local Variables :noexport:
 Local Variables:
 eval: (add-hook 'after-save-hook 'org-latex-export-to-latex t t)
+jinx-local-words: "DTCs Loihi frontend"
 End:
