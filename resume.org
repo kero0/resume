@@ -8,14 +8,12 @@
 #+latex_header_extra: \newcommand{\email}{kbakheat@gmail.com}
 #+latex_header_extra: \newcommand{\phone}{248-250-3241}
 
-#+latex_header_extra: \newcommand{\header}{Innovative Software Engineer with a strong background in computer science, electrical engineering, and applied research. Skilled in embedded systems, machine learning, and full-stack development, with proven success in developing algorithms, debugging complex systems, and leading cross-functional programs. Adept at solving challenging technical problems, deploying scalable solutions, and driving projects from concept to launch. Strong foundation in both software and hardware engineering.}
-
 * Experience
 {{{experience-start(Software Engineer - Infotainment Systems *|* Ford Motor Company,March 2024 -- Present)}}}
-- Diagnose and resolve performance issues in Android-based infotainment systems, including crashes, black screens, and unresponsive apps.
-- Debug and deliver fixes for Android core components, contributing patches upstream.
-- Developed tools for automating log collection and initial triaging
-- Develop and implement methods to dynamically estimate vehicle parameters for energy based vehicle routing.
+- Diagnosing performance issues in Android-based infotainment systems, including crashes, black screens, and unresponsive apps.
+- Developing tools for automating log collection, initial triaging, and report generation.
+- Implementing algorithms to dynamically estimate vehicle parameters for energy based vehicle routing.
+- Building data analysis platform to continuously improve algorithms based on new drive data.
 {{{experience-end}}}
 
 {{{experience-start(Research Engineer - Sensors and Algorithms *|* Ford Motor Company,July 2023 -- March 2024)}}}
@@ -31,36 +29,47 @@
 
 {{{experience-start(Research Engineer - Core AI/ML/QC *|* Ford Motor Company,September 2022 -- February 2023)}}}
 - Conducted pioneering research on neuromorphic computing with Intel’s Loihi platform.
-- Developed an energy-optimized routing algorithm for real-world Ford service applications.
-- Built and deployed a cloud service on GCP, including architecture design, CI/CD pipelines, backend, and frontend integration.
+- Created a bespoke energy-optimized routing algorithm for real-world Ford service applications capable of running on neuromorphic hardware.
+- Built and deployed a cloud service on GCP for a quantum inspired energy-optimized routing algorithm, including architecture design, CI/CD pipelines, backend, and frontend integration.
 - Benchmarked accuracy, efficiency, and performance across neuromorphic, classical, and quantum computing paradigms.
 {{{experience-end}}}
 
 {{{experience-start(Research Intern - IoT *|* Ford Motor Company,May 2021 -- July 2021)}}}
-- Built a proof-of-concept IoT API microservice, prototyped locally and in the cloud.
-- Designed secure cloud-to-vehicle architecture enabling modular integration for upfitters.
-- Developed an IoT library for secure vehicle communication, with an intrusion detection camera module as proof of concept.
+- Built a proof-of-concept IoT microservice to connect our cloud to smart garage door openers and deployed using OpenShift.
+- Designed cloud-to-vehicle architecture enabling modular integration for upfitters to securely add functionality to fleet vehicles.
+- Developed an IoT library for secure vehicle to cloud communication
+- Wrote intrusion detection camera module using a Raspberry Pi as proof of concept upfitter module.
 {{{experience-end}}}
 
 * Education
-#+latex: \newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
-#+attr_latex: :options {\linewidth}{Y Y >{}Y}
+#+attr_latex: :options {1.2\linewidth}{Y Y >{}Y}
 #+begin_tabularx
-{{{education(Expected: May 2027,Master of Science\, Computer Science ,Georgia Institute of Technology,(GPA: 3.0/4.0))}}}
-{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy,(GPA: 3.8/4.0))}}}
+{{{education(Expected: Dec 2027,Master of Science\, Computer Science ,Georgia Institute of Technology)}}}
+{{{education(May 2022,Bachelor of Science\, Computer Science @@latex:\newline@@ Bachelor of Electrical Engineering,University of Detroit Mercy)}}}
 #+end_tabularx
 
+#+latex: \vspace{-1em}
+* Projects
+{{{project-start(Street Address Recognition System)}}}
+- Model trained on SVHN dataset that uses MSER to localize digits in an image and a custom CNN for digit classification to recognize a street address from an arbitrary image in an arbitrary orientation.
+{{{project-end}}}
+
+{{{project-start(E-Ink Calendar)}}}
+- Designed and built a custom e-ink display dashboard using a microcontroller, display, and my own bespoke software with zero dependencies and my own custom programmatically generated static bitmap graphics.
+{{{project-end}}}
+
 * Skills
+#+latex: \vspace{-1em}
 #+attr_latex: :options {2}
 #+begin_multicols
-- *Languages:* Python, Rust, C, ARM Assembly, Bash, JavaScript, Haskell, MATLAB
+- *Languages:* Python, Rust, C, Bash, JavaScript
 - *Systems & Hardware:* FPGA development, microcontroller programming (Arduino, Raspberry Pi, ARM Cortex-M), embedded systems
-- *Software & Tools:* Docker, Kubernetes, ROS, CI/CD, cloud platforms (GCP)
+- *Software & Tools:* Docker, Kubernetes, ROS, GitHub Actions, GCP
 - *Specialties:* Machine learning, data mining, computer vision, algorithms, debugging complex systems
 #+end_multicols
 
 * Local Variables :noexport:
 Local Variables:
 eval: (add-hook 'after-save-hook 'org-latex-export-to-latex t t)
-jinx-local-words: "DTCs Loihi frontend"
+jinx-local-words: "DTCs Kubernetes Loihi OpenShift eval frontend microcontroller programmatically triaging upfitter upfitters"
 End:

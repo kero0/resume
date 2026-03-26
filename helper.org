@@ -7,6 +7,7 @@
 #+latex_header: \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 #+latex_header: \titlespacing{\section}{0pt}{10pt}{10pt}
 #+latex_header: \setlist{topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=0.5em}
+#+latex_header: \newcolumntype{Y}{>{\small\raggedright\arraybackslash}X}
 
 #+latex: \pagestyle{empty}
 
@@ -23,15 +24,28 @@
 ** experience-end
 #+end_minipage
 #+end_tabularx
+** project-start
+#+begin_tabularx
+#+latex: {\linewidth}{ @{}l r@{} }
+@@latex: \textbf{@@$1 @@latex: } & \hfill \\[3.75pt] \multicolumn{2}{@{}X@{}}@@
+
+#+attr_latex: [t]
+#+begin_minipage
+#+latex: {\linewidth}
+
+** project-end
+#+end_minipage
+#+end_tabularx
 ** education
-*$3* @@latex: &@@ $2 @@latex: & \textit{@@ $1 @@latex: } \newline @@ $4 @@latex: \\@@
+*$3* @@latex: &@@ $2 @@latex: & \textit{@@ $1 @@latex: } \newline @@ @@latex: \\@@
 
 * Local Variables :noexport:
 #+begin_src emacs-lisp :results output :session :exports both
 (make-variable-buffer-local 'org-latex-title-command)
 (setq org-latex-title-command
-"\\begin{tabularx}{\\linewidth}{@{} C @{}}
+"\\begin{tabularx}{\\linewidth}{C C C}
 {\\Huge{%a}} \\\\
+\\vspace{-1em}
 {\\small
 \\href{https://github.com/\\githubUser}{\\raisebox{-0.05\\height}\\faGithub\\ \\githubUser} \\ $|$ \\
 \\href{https://linkedin.com/in/\\linkedinUser}{\\raisebox{-0.05\\height}\\faLinkedin\\ \\linkedinUser} \\ $|$ \\
@@ -40,8 +54,8 @@
 %%\\href{tel:+000000000000}{\\raisebox{-0.05\\height}\\faMobile \\ +00.00.000.000} \\\\
 }
 \\end{tabularx}
-
-\\header")
+\\vspace{-3em}
+")
 
 (make-variable-buffer-local 'org-latex-classes)
 (setq org-latex-classes
