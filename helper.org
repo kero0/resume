@@ -44,6 +44,7 @@
 (make-variable-buffer-local 'org-latex-title-command)
 (setq org-latex-title-command
 "\\begin{tabularx}{\\linewidth}{C C C}
+\\vspace{-2em}
 {\\Huge{%a}} \\\\
 \\vspace{-1em}
 {\\small
@@ -54,7 +55,7 @@
 %%\\href{tel:+000000000000}{\\raisebox{-0.05\\height}\\faMobile \\ +00.00.000.000} \\\\
 }
 \\end{tabularx}
-\\vspace{-3em}
+\\vspace{-2em}
 ")
 
 (make-variable-buffer-local 'org-latex-classes)
